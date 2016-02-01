@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/DugeonSurvivor/Scene/Test/CharacterTestScene.unity
+  isLoaded: 1
+  isActive: 1

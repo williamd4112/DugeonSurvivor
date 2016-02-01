@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DugeonSurvivor.CSharp.Plugins", "DugeonSurvivor.CSharp.Plugins.csproj", "{485E8F37-A7B7-05CB-B16D-5901B17074CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DugeonSurvivor.CSharp", "DugeonSurvivor.CSharp.csproj", "{BD05D1A2-99CF-C9F2-303C-B1F401621C3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DugeonSurvivor.CSharp.Editor", "DugeonSurvivor.CSharp.Editor.csproj", "{8F483C61-2903-405E-FC83-B5C361FCF39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{485E8F37-A7B7-05CB-B16D-5901B17074CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485E8F37-A7B7-05CB-B16D-5901B17074CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485E8F37-A7B7-05CB-B16D-5901B17074CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485E8F37-A7B7-05CB-B16D-5901B17074CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD05D1A2-99CF-C9F2-303C-B1F401621C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD05D1A2-99CF-C9F2-303C-B1F401621C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD05D1A2-99CF-C9F2-303C-B1F401621C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD05D1A2-99CF-C9F2-303C-B1F401621C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F483C61-2903-405E-FC83-B5C361FCF39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F483C61-2903-405E-FC83-B5C361FCF39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F483C61-2903-405E-FC83-B5C361FCF39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F483C61-2903-405E-FC83-B5C361FCF39D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
