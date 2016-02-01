@@ -6,15 +6,17 @@ namespace DugeonSurvivor
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(CapsuleCollider))]
     [RequireComponent(typeof(Animator))]
-    [RequireComponent(typeof(Health))]
     public class GameCharacter : MonoBehaviour
     {
+        public const int ATTACK1_MASK = 0x1;
+        public const int ATTACK2_MASK = 0x2;
+        public const int ATTACK3_MASK = 0x4;
+
         [SerializeField]
         private float m_MoveSpeed = 3.0f;
 
         private Rigidbody m_Rigidbody;
         private Animator m_Animator;
-        private Health m_Health;
 
         // Use this for initialization
         void Start()
@@ -22,13 +24,6 @@ namespace DugeonSurvivor
             m_Rigidbody = GetComponent<Rigidbody>();
             m_Animator = GetComponent<Animator>();
 
-            m_Health.RegisterHealthChangeEvent(onHit);
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
         }
 
         public void Move(Vector2 velocity, int attackMask)

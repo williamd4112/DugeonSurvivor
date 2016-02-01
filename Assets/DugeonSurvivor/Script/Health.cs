@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace DugeonSurvivor
+namespace WiFramework
 {
     public delegate void HealthChangeEvent(int hp, int diff);
 

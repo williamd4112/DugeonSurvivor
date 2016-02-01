@@ -72,6 +72,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DugeonSurvivor\Script\Effect\HealthChangeEffecter.cs" />
+    <Compile Include="Assets\DugeonSurvivor\Script\Framework\CoroutineTimer.cs" />
+    <Compile Include="Assets\DugeonSurvivor\Script\Framework\Damageable.cs" />
+    <Compile Include="Assets\DugeonSurvivor\Script\Framework\Recycleable.cs" />
+    <Compile Include="Assets\DugeonSurvivor\Script\Framework\WiEffect.cs" />
     <Compile Include="Assets\DugeonSurvivor\Script\GUITest.cs" />
     <Compile Include="Assets\DugeonSurvivor\Script\GameCharacter.cs" />
     <Compile Include="Assets\DugeonSurvivor\Script\Health.cs" />
