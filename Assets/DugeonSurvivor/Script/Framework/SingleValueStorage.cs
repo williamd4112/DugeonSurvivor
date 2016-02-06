@@ -6,21 +6,45 @@ using System;
 namespace WiFramework
 {
     [Serializable]
-    abstract public class SingleValueStorage<T> : MonoBehaviour
-    {
-        [Serializable]
-        public class SingleValueChangeEvent : UnityEvent { }
+    public class SingleValueChangeUIEvent : UnityEvent<int, int> { }
+    [Serializable]
+    public class SingleValueChangeEvent : UnityEvent<int, int> { }
 
+    [Serializable]
+    abstract public class SingleValueStorage : MonoBehaviour
+    {
         [SerializeField]
-        private T m_MaxValue;
+        private int m_MaxValue = 100;
         [SerializeField]
-        private T m_CurValue;
+        private int m_MinValue = 0;
         [SerializeField]
-        private T m_MinValue;
-        [SerializeField]
-        private T m_InitValue;
+        private int m_InitValue;
+        private int m_CurValue;
+
+        public int MaxValue { get { return m_MaxValue; } }
+        public int MinValue { get { return m_MinValue; } }
+        public int Value { get { return m_CurValue; } }
 
         public SingleValueChangeEvent m_ValueEvents;
+        public SingleValueChangeUIEvent m_ValueUIEvents;
+        
+        public void Restore()
+        {
+            ChangeValue(m_MaxValue);
+        }        
+
+        public void ChangeValue(int diff)
+        {
+            m_CurValue = Mathf.Clamp(m_CurValue + diff, m_MinValue, m_MaxValue);
+            m_ValueEvents.Invoke(m_CurValue, diff);
+            m_ValueUIEvents.Invoke(m_CurValue, m_MaxValue);
+        }
+
+        void Start()
+        {
+            m_CurValue = m_InitValue;
+            m_ValueUIEvents.Invoke(m_CurValue, m_MaxValue);
+        }
 
     }
 

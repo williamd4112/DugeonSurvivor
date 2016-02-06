@@ -55,7 +55,9 @@ MonoBehaviour:
   m_IgnoreTags:
   - Enemy
   m_Damage:
-    damageAmount: 10
+    m_DamageAmount: 10
+    m_CriticalHitRate: 0.206
+    m_CriticalHitBuff: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -65,6 +67,14 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Damage.damageAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Damage.m_CriticalHitRate
+      value: 0.206
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Damage.m_DamageAmount
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []

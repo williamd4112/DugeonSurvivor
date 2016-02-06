@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 463578}
   - 198: {fileID: 19881296}
   - 199: {fileID: 19965316}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ring1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 481712}
   - 198: {fileID: 19834404}
   - 199: {fileID: 19985182}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,8 @@ GameObject:
   - 4: {fileID: 441328}
   - 198: {fileID: 19839672}
   - 95: {fileID: 9527220}
-  m_Layer: 0
-  m_Name: Spiral_02.3 Domain
+  m_Layer: 12
+  m_Name: CollectedEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 407042}
   - 198: {fileID: 19814330}
   - 199: {fileID: 19920686}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: glitter2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 427994}
   - 198: {fileID: 19821480}
   - 199: {fileID: 19963032}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ring2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 475800}
   - 198: {fileID: 19821206}
   - 199: {fileID: 19995088}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: par1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,11 +110,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419686}
-  - 114: {fileID: 11476654}
   - 135: {fileID: 13514906}
   - 114: {fileID: 11442322}
   - 114: {fileID: 11494902}
-  m_Layer: 0
+  - 114: {fileID: 11440294}
+  - 114: {fileID: 11402802}
+  m_Layer: 12
   m_Name: HealthBuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +132,7 @@ GameObject:
   - 4: {fileID: 495576}
   - 198: {fileID: 19838630}
   - 199: {fileID: 19960656}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +149,7 @@ GameObject:
   - 4: {fileID: 458126}
   - 198: {fileID: 19889174}
   - 199: {fileID: 19912648}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: particle glow slave birth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +166,7 @@ GameObject:
   - 4: {fileID: 497424}
   - 198: {fileID: 19861102}
   - 199: {fileID: 19968318}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: par3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +183,7 @@ GameObject:
   - 4: {fileID: 414242}
   - 198: {fileID: 19888234}
   - 199: {fileID: 19948768}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +200,7 @@ GameObject:
   - 4: {fileID: 412478}
   - 198: {fileID: 19832610}
   - 199: {fileID: 19980916}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +217,7 @@ GameObject:
   - 4: {fileID: 498934}
   - 198: {fileID: 19826634}
   - 199: {fileID: 19940466}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: glitter1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +234,7 @@ GameObject:
   - 4: {fileID: 462088}
   - 198: {fileID: 19865328}
   - 199: {fileID: 19946762}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle core glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +251,7 @@ GameObject:
   - 4: {fileID: 458042}
   - 198: {fileID: 19886384}
   - 199: {fileID: 19992398}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +268,7 @@ GameObject:
   - 4: {fileID: 467956}
   - 198: {fileID: 19811460}
   - 199: {fileID: 19945208}
-  m_Layer: 1
+  m_Layer: 12
   m_Name: particle glow master 021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,8 +283,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 489360}
-  m_Layer: 0
-  m_Name: Eff_Heal_2_loop
+  m_Layer: 12
+  m_Name: IdleEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +333,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5443115, y: -6.196289, z: 4.561508}
+  m_LocalPosition: {x: 5.4639435, y: -6.141354, z: -5.7270737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489360}
@@ -526,6 +527,55 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11402802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2047135db3ca94cbdd1fefe436a06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Time: 10
+  m_Mode: 0
+  m_AutoTrigger: 1
+  TimeoutEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11442322}
+        m_MethodName: StartRecycle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: WiFramework.CoroutineTimerUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &11440294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2488972f0f2d9745b5554fd62dd30ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ItemTag: 
+  m_CollectableTags:
+  - Player
+  m_Value: 10
+  m_DelayBeforeRecycle: 1
+  m_CollectedSound: {fileID: 8300000, guid: ae9c5810279649943b744e1b1a951f8c, type: 3}
+  m_Effect: {fileID: 119478}
+  m_Type: 0
 --- !u!114 &11442322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -537,24 +587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaee9c3e2d3a22741bd981ad110050f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11476654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fb01cea9580e1a4bac6729a3b8c9cc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ItemTag: HealthBuff
-  m_CollectableTags:
-  - Player
-  m_Value: 10
-  m_DelayBeforeRecycle: 1
-  m_CollectedSound: {fileID: 8300000, guid: ae9c5810279649943b744e1b1a951f8c, type: 3}
-  m_Effect: {fileID: 119478}
 --- !u!114 &11494902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2237,7 +2269,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294508459
+        rgba: 4286709607
       minMaxState: 0
     startSize:
       scalar: 2
@@ -3676,7 +3708,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294770603
+        rgba: 4284874565
       minMaxState: 0
     startSize:
       scalar: 0.05
@@ -6559,7 +6591,7 @@ ParticleSystem:
         rgba: 4282993151
       maxColor:
         serializedVersion: 2
-        rgba: 4294964387
+        rgba: 4289724323
       minMaxState: 0
     startSize:
       scalar: 0.5
@@ -13889,7 +13921,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294964651
+        rgba: 4289462193
       minMaxState: 0
     startSize:
       scalar: 3
@@ -17127,7 +17159,7 @@ ParticleSystem:
           rgba: 4294967154
         key2:
           serializedVersion: 2
-          rgba: 14876440
+          rgba: 7405336
         key3:
           serializedVersion: 2
           rgba: 0
@@ -22965,8 +22997,56 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: TimeoutEvents.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: InitialModule.startColor.maxColor.rgba
       value: 4290248570
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CollectedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ae9c5810279649943b744e1b1a951f8c, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Effect
+      value: 
+      objectReference: {fileID: 119478}
+    - target: {fileID: 0}
+      propertyPath: m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_DelayBeforeRecycle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AutoTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TimeoutEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11442322}
+    - target: {fileID: 0}
+      propertyPath: TimeoutEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartRecycle
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TimeoutEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

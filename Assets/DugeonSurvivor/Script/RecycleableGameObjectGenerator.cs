@@ -13,6 +13,8 @@ namespace DugeonSurvivor
         private EventBasedGameObjectPool m_Pool;
         [SerializeField]
         private string m_SpawnPointTag;
+        [SerializeField]
+        private Transform[] m_CustomSpawnPoints;
 
         GameObject[] m_SpawnPoints;
         CoroutineTimer m_Timer;
@@ -29,9 +31,18 @@ namespace DugeonSurvivor
 
         void spawn()
         {
-            if(m_Pool.Count >= m_SpawnPoints.Length)
+            if(m_Pool.Count >= m_SpawnPoints.Length + m_CustomSpawnPoints.Length)
             {
                 foreach (GameObject obj in m_SpawnPoints)
+                {
+                    GameObject dummy = m_Pool.Pop();
+                    if (dummy != null)
+                    {
+                        dummy.transform.position = obj.transform.position;
+                    }
+                }
+
+                foreach (Transform obj in m_CustomSpawnPoints)
                 {
                     GameObject dummy = m_Pool.Pop();
                     if (dummy != null)

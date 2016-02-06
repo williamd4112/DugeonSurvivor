@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
+using System;
 using WiFramework;
 
 namespace DugeonSurvivor
 {
     [RequireComponent(typeof(EventBasedRecycleable))]
     [RequireComponent(typeof(DelayOperation))]
-    abstract public class ValueBuff : GameItem
+    public class ValueBuff : GameItem
     {
+        public enum ValueBuffType
+        {
+            Health,
+            Mana
+        }
+
         [SerializeField]
         private int m_Value;
         [SerializeField]
@@ -16,6 +24,8 @@ namespace DugeonSurvivor
         private AudioClip m_CollectedSound;
         [SerializeField]
         private GameObject m_Effect;
+        [SerializeField]
+        private ValueBuffType m_Type = ValueBuffType.Health;
 
         protected override void onCollected(GameObject collector)
         {
@@ -32,13 +42,33 @@ namespace DugeonSurvivor
         {
             m_Effect.SetActive(false);
             EventBasedRecycleable r = GetComponent<EventBasedRecycleable>();
-            if (r.Handler != null)
-                r.StartRecycle();
-            else
-                Destroy(gameObject);
+
+            r.StartRecycle();
         }
 
-        abstract protected bool buff(GameObject collector, int val);
+        bool buff(GameObject collector, int val)
+        {
+            SingleValueStorage valueStorage = getValueStorage(collector);
+            if (valueStorage != null)
+            {
+                valueStorage.ChangeValue(val);
+                return true;
+            }
+            return false;
+        }
+
+        SingleValueStorage getValueStorage(GameObject collector)
+        {
+            switch(m_Type)
+            {
+                case ValueBuffType.Health:
+                    return collector.GetComponent<Health>();
+                case ValueBuffType.Mana:
+                    return collector.GetComponent<Mana>();
+                default:
+                    return null;
+            }
+        }
 
     }
 }

@@ -33,8 +33,8 @@ namespace DugeonSurvivor
             m_Damageable = GetComponent<Damageable>();
             m_NavAgent = GetComponent<NavMeshAgent>();
 
-            m_Damageable.RegisterDamageEvent(onStayHit);
-            m_Damageable.SetDeathHandler(onDead);
+            //m_Damageable.RegisterDamageEvent(onStayHit);
+            //m_Damageable.SetDeathHandler(onDead);
         }
 
         public void Move(Vector3 pos, bool attack)
@@ -68,7 +68,7 @@ namespace DugeonSurvivor
         void onStayHit(Damage damage, int hp)
         {
             if (m_Death) return;
-            if (damage.damageAmount > 0)
+            if (damage.DamageAmount > 0)
             {
                 m_NavAgent.velocity = Vector3.zero;
                 m_Animator.SetTrigger("Damage");
@@ -89,7 +89,7 @@ namespace DugeonSurvivor
                     c.enabled = false;
 
                 Recycleable recycle = GetComponent<Recycleable>();
-                if (recycle != null && recycle.Handler != null)
+                if (recycle != null)
                 {
                     StartCoroutine(Recycle(recycle));
                 }

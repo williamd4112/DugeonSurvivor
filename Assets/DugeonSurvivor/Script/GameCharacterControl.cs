@@ -5,14 +5,16 @@ using UnityStandardAssets.CrossPlatformInput;
 namespace DugeonSurvivor
 {
     [RequireComponent(typeof(GameCharacter))]
-    [RequireComponent(typeof(AttackCaster))]
+    [RequireComponent(typeof(MagicAttackCaster))]
     public class GameCharacterControl : MonoBehaviour
     {
         private GameCharacter m_Character;
+        private MagicAttackCaster m_Caster;
 
         private Vector3 m_ProjMousePos;
         private bool m_Attack;
         private int m_AttackMode;
+        private int m_CastType;
 
         private int floorMask;
         private float camRayLength = 1000f;
@@ -21,8 +23,10 @@ namespace DugeonSurvivor
         void Start()
         {
             floorMask = LayerMask.GetMask("Floor");
-            m_AttackMode = 0x1;
+            m_AttackMode = 0;
+            m_CastType = 0;
             m_Character = GetComponent<GameCharacter>();
+            m_Caster = GetComponent<MagicAttackCaster>();
         }
 
         // Update is called once per frame
@@ -34,8 +38,9 @@ namespace DugeonSurvivor
 #else
             if(Input.GetButtonDown("SwitchAttack"))
             {
-                m_AttackMode <<= 1;
-                m_AttackMode %= 7;
+                m_CastType++;
+                m_CastType %= m_Caster.NumberOfProjectiles;
+                m_Caster.SetSelectProjectile(m_CastType);
             }
 
             if(Input.GetButtonDown("Fire1"))
@@ -57,9 +62,26 @@ namespace DugeonSurvivor
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
 
-            m_Character.Move(h, v, m_Attack, m_AttackMode, m_ProjMousePos);
-            m_Attack = false;
+            if(m_Attack)
+            {
+                m_Character.Action(m_AttackMode);
+                m_Attack = false;
+            }
+            else
+            {
+                m_Character.Move(h, v);
+            }
         }
 
+        public void CastAtMousePosition()
+        {
+            m_Character.Look(m_ProjMousePos);
+            m_Caster.Cast(m_ProjMousePos);
+        }
+
+        public void LookAtMousePosition()
+        {
+            m_Character.Look(m_ProjMousePos);
+        }
     }
 }

@@ -57,6 +57,16 @@ namespace WiFramework
             return obj;
         }
 
+        public GameObject PopTo(Vector3 pos)
+        {
+            GameObject obj = Pop();
+            if(obj != null)
+            {
+                obj.transform.position = pos;
+            }
+            return obj;
+        }
+
         public void Fill(GameObject template, int count)
         {
             if (template == null || count <= 0) return;
@@ -96,7 +106,6 @@ namespace WiFramework
         void pushBackToPool(GameObject obj)
         {
             m_Pool.Enqueue(obj);
-            Debug.Log(obj + " back");
             obj.SetActive(false);
         }
     }
